@@ -16,7 +16,7 @@ difficulty = 25
 
 # Window size
 frame_size_x = 720
-frame_size_y = 480
+frame_size_y = 500
 
 # Checks for errors encountered
 check_errors = pygame.init()
