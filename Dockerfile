@@ -9,7 +9,7 @@ RUN apt-get update && \
 WORKDIR /app
 
 # Copy game files
-COPY ./Python_Snake_game/ .
+COPY . .
 
 # Set display env (for headless systems)
 ENV DISPLAY=:0
