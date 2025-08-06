@@ -16,17 +16,34 @@ difficulty = 25
 
 # Window size
 frame_size_x = 720
-frame_size_y = 500
+frame_size_y = 480
 
 # Checks for errors encountered
-check_errors = pygame.init()
+#check_errors = pygame.init()
 # pygame.init() example output -> (6, 0)
 # second number in tuple gives number of errors
-if check_errors[1] > 0:
-    print(f'[!] Had {check_errors[1]} errors when initialising game, exiting...')
-    sys.exit(-1)
-else:
-    print('[+] Game successfully initialised')
+#if check_errors[1] > 0:
+ #   print(f'[!] Had {check_errors[1]} errors when initialising game, exiting...')
+  #  sys.exit(-1)
+#else:
+ #   print('[+] Game successfully initialised')
+
+def init_game():
+    check_errors = pygame.init()
+    if check_errors[1] > 0:
+        print("Init error")
+        return False
+    return True
+
+def main():
+    if not init_game():
+        sys.exit(-1)
+    # game loop here
+
+if __name__ == "__main__":
+    main()
+
+
 
 
 # Initialise game window
